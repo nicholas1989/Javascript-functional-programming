@@ -1,6 +1,6 @@
 class Dish {
-    constructor(name, price, ingredients) {
-        this.name = name;
+    constructor(food, price, ingredients) {
+        this.food = food;
         this.price = price;
         this.ingredients = ingredients;
     }
@@ -15,3 +15,18 @@ class Dish {
         return this.price - this.cost();
     }
 }
+
+class Ingredient {
+    constructor(ingredientName, cost) {
+        this.ingredientName = ingredientName;
+        this.cost = cost;
+    }
+}
+
+class Client {
+    constructor(name, id) {
+        this.name = name;
+        this.id = id;
+    }
+}
+
