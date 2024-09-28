@@ -34,10 +34,11 @@ class Ingredient {
     }
 }
 
+
 class Client {
-    constructor(name, id) {
-        this.name = name;
-        this.id = id;
+    constructor(clientName, clientId) {
+        this.clientName = clientName;
+        this.clientId = clientId;
     }
 }
 
@@ -48,10 +49,44 @@ class Restaurant {
         this.orders = [];
     }
 
-    orderDish =(dish, client)=> {
+    orderDish = (dish, client) => {
         this.orders.push({dish, client});
     }
+
+    printOrder = (client) => {
+        const clientOrders = this.orders.filter(order => order.client.clientId === client.clientId);
+
+        console.log(`${client.clientName}`);
+        let total = 0;
+        clientOrders.forEach((order, index) => {
+            console.log(`Order #${index}: ${order.dish.food} - ${order.dish.price}`);
+            total += order.dish.price;
+        });
+        console.log(`Total: ${total}`);
+    }
+
+    // Print the total profit for the restaurant
+    totalProfit = () => {
+        let profit = 0;
+        this.orders.forEach(order => {
+            profit += order.dish.profit();
+        })
+        console.log(`Total Profit: ${profit}`)
+    }
+
+    // Calculate the profit for a specific client
+    clientProfit = (client) => {
+        const clientOrders = this.orders.filter(order => order.client.clientId === client.clientId);
+        let profit = 0;
+        clientOrders.forEach(order => {
+            profit += order.dish.profit();
+        });
+        console.log(`Profit from ${client.clientName}: ${profit}`);
+    }
 }
+
+
+
 
 // Ingredients
 const cheese = new Ingredient('Cheese', 5);
@@ -68,3 +103,20 @@ const salad = new Dish('Salad', 25, [lettuce, cheese, tomato]);
 const pluto = new Client('Pluto', 1);
 const goofy = new Client('Goofy', 2);
 
+// Restaurant
+const pizzahut = new Restaurant('Pizza Hut');
+
+// Place orders for Goofy and Pluto
+pizzahut.orderDish(pizza, goofy);
+pizzahut.printOrder(goofy);
+
+pizzahut.orderDish(pizza, pluto);
+pizzahut.orderDish(salad, pluto);
+pizzahut.printOrder(pluto);
+
+// Calculate total profit
+pizzahut.totalProfit();
+
+// Calculate profit for each client
+pizzahut.clientProfit(pluto);
+pizzahut.clientProfit(goofy);
