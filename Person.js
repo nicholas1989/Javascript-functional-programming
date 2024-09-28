@@ -100,23 +100,23 @@ const pizza = new Dish('Pizza', 30, [cheese, pepperoni, dough]);
 const salad = new Dish('Salad', 25, [lettuce, cheese, tomato]);
 
 // Clients
-const pluto = new Client('Pluto', 1);
-const goofy = new Client('Goofy', 2);
+const Nkemakolam = new Client('Nkemakolam', 1);
+const Chioma = new Client('Chioma', 2);
 
 // Restaurant
 const pizzahut = new Restaurant('Pizza Hut');
 
 // Place orders for Goofy and Pluto
-pizzahut.orderDish(pizza, goofy);
-pizzahut.printOrder(goofy);
+pizzahut.orderDish(pizza, Chioma);
+pizzahut.printOrder(Chioma);
 
-pizzahut.orderDish(pizza, pluto);
-pizzahut.orderDish(salad, pluto);
-pizzahut.printOrder(pluto);
+pizzahut.orderDish(pizza, Nkemakolam);
+pizzahut.orderDish(salad, Nkemakolam);
+pizzahut.printOrder(Nkemakolam);
 
 // Calculate total profit
 pizzahut.totalProfit();
 
 // Calculate profit for each client
-pizzahut.clientProfit(pluto);
-pizzahut.clientProfit(goofy);
+pizzahut.clientProfit(Nkemakolam);
+pizzahut.clientProfit(Chioma);
