@@ -1,10 +1,10 @@
 <h1><b>JAVASCRIPT FUNCTIONAL PROGRAMMING EXERCISE</b></h1>
  
  <h3>INVENTORS</h3>
-The following code block shows an array of inventors. Write functions to perform the following operations on the array:
+<p>The following code block shows an array of inventors. Write functions to perform the following operations on the array:</p>
 
-    Filter the list of inventors to only those born in the 1500s.
-    Create a new array of the inventor’s first and last names.
+    <p>Filter the list of inventors to only those born in the 1500s.</p>
+    <p>Create a new array of the inventor’s first and last names.</p>
     Sort the inventors by birth year, from oldest to youngest.
     Calculate the total number of years lived by all inventors. The reduce() method might help you here.
     Sort the inventors by the number of years they lived.
