@@ -1,4 +1,4 @@
-JAVASCRIPT FUNCTIONAL PROGRAMMING EXERCISE
+<h1>JAVASCRIPT FUNCTIONAL PROGRAMMING EXERCISE</h1>
  * 
  * INVENTORS
  * The following code block shows an array of inventors. Write functions to perform the following operations on the array:
