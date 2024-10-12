@@ -1,7 +1,7 @@
-<h1>JAVASCRIPT FUNCTIONAL PROGRAMMING EXERCISE</h1>
- * 
- * INVENTORS
- * The following code block shows an array of inventors. Write functions to perform the following operations on the array:
+<h1><b>JAVASCRIPT FUNCTIONAL PROGRAMMING EXERCISE</b></h1>
+ 
+ <h3>INVENTORS</h3>
+The following code block shows an array of inventors. Write functions to perform the following operations on the array:
 
     Filter the list of inventors to only those born in the 1500s.
     Create a new array of the inventor’s first and last names.
